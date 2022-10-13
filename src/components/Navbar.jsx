@@ -27,8 +27,8 @@ function Navbar() {
           {[
             ["/", "Home"],
             ["/projects", "Projects"],
+            ["blog", "Blog"],
             ["/about", "About"],
-            ["/contact", "Contact"],
           ].map(([path, label]) => (
             <li className="w-36 text-center">
               <Link onClick={() => setNavOpen(false)} to={path}>
@@ -41,7 +41,7 @@ function Navbar() {
               className="w-6 transition-all absolute bottom-0 border-b-2 border-teal-500"
               style={{
                 transform: `translateX(${
-                  ["/", "/projects", "/about", "/contact"].indexOf(
+                  ["/", "/projects", "/blog", "/about"].indexOf(
                     location.pathname
                   ) *
                     9 +
@@ -57,8 +57,8 @@ function Navbar() {
         {[
           ["/", "Home"],
           ["/projects", "Projects"],
+          ["/blog", "Blog"],
           ["/about", "About"],
-          ["/contact", "Contact"],
         ].map(([path, label]) => (
           <li className="w-36 text-center">
             <Link to={path}>{label}</Link>
@@ -69,7 +69,7 @@ function Navbar() {
             className="w-6 transition-all absolute bottom-0 border-b-2 border-teal-500"
             style={{
               transform: `translateX(${
-                ["/", "/projects", "/about", "/contact"].indexOf(
+                ["/", "/projects", "/blog", "/about"].indexOf(
                   location.pathname
                 ) *
                   9 +

@@ -9,13 +9,13 @@ function Projects() {
 
   useEffect(() => {
     fetch(
-      "https://api.github.com/repos/melvinchia3636/MRGA/contents",
+      "https://api.github.com/repos/melvinchia3636/MRGA/contents/projects?ref=main",
       FETCH_HEADERS
     )
       .then((e) => e.json())
       .then((data) => setProjects(data.filter((e) => e.name.endsWith(".png"))));
     fetch(
-      "https://raw.githubusercontent.com/melvinchia3636/MRGA/main/index.json"
+      "https://raw.githubusercontent.com/melvinchia3636/MRGA/main/projects/index.json"
     )
       .then((e) => e.json())
       .then((l) => setLinks(l));

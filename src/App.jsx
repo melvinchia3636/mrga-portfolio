@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import Blog from "./components/Blog";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 
@@ -36,9 +37,8 @@ function About() {
   return (
     <div className="flex-1 flex items-center justify-center w-3/4 text-center">
       <h1 className="text-2xl ">
-        A team branched under Mirco Computer Society Foon Yew High School Johor
-        Bahru, our target is to make as many cool projects as possible using the
-        skills set we have acquired.
+        A team aimed to make as many cool projects as possible using the skills
+        set we have acquired, primarily using ReactJS.
       </h1>
     </div>
   );
@@ -61,6 +61,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="projects" element={<Projects />} />
             <Route path="about" element={<About />} />
+            <Route path="blog" element={<Blog />} />
             <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
